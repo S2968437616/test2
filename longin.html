@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" type="text/css" href="../css2/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-sacale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 400px;
+            height: 516px;
+            position: relative;/*相对的定位*/
+            background-color: sandybrown;
+        }
+        #wrap #top{
+            width: 400px;
+            height: 10px;
+        }
+        #wrap #top .top-font{
+            width: 200px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 90px;
+        }
+        #center{
+            width: 400px;
+            height: 460px;
+        }
+        #center .center-input{
+            width: 400px;
+            height: 80px;
+            margin-top: 30px;
+            font-size: 15px;
+            background-color: #aaaaaa;
+        }
+        #center .center-input .center-input-img{
+            width:35px;
+            height: 40px;
+            display: inline-block;/*行内块显示 不会自己跑一行*/
+            float: right;
+            text-align: center;
+            background-color: red;
+        }
+        #center .center-butten{
+            width: 380px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #center .center-down{
+            width: 400px;
+            height: 30px;
+            margin-top: 20px;
+        }
+        #center .center-down .center-down-a{
+            width: 150px;
+            height: 30px;
+            float: left;
+            right: 10px;
+            text-align: center;
+            font-size: 15px;
+            color: red;
+            display: inline-block;
+
+        }
+        #center .center-down .center-down-b{
+            width: 100px;
+            height: 30px;
+            float: right;
+            left: 10px;
+            text-align: center;
+            font-size: 15px;
+            color: red;
+            display: inline-block;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="top">
+        <div class="top-font">
+        京东账户登录
+        </div>
+    </div>
+<div id="center">
+    <div class="center-input">
+        <from method="post">
+            <input type="text" placeholder="手机号/邮箱/会员名"style="width:400px;height:40px; border:red;"><br>
+            <input type="password" placeholder="请输入登录密码"style="width:361px;height: 40px;border: yellow; border-left-color:silver" name="password">
+            <div class="center-input-img">
+                <span class="iconfont" style="color:darkblue;font-size: 30px">&#xe633;</span>
+            </div>
+        </from>
+    </div>
+    <div class="center-butten">
+        <button class="butter" style="width:350px; height:50px;">
+            <a href="主页.html" style="text-decoration: none;" >登录</a>
+        </button>
+    </div>
+    <div class="center-down">
+        <div class="center-down-a">短信验证登录</div>
+        <div class="center-down-b">免费注册</div>
+    </div>
+</div>
+</div>
+</body>
+</html>

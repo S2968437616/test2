@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+   maximum-scale=1.0, user-scalable=0">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap{
+            width: 375px;
+            height: 1050px;
+            background-color: #F5F5F5;
+        }
+
+        #zhu{
+            width: 375px;
+            height: 375px;
+            background-image: url("./imgs/687a851dc3546755.jpg");
+            background-size: 100% 100%;
+        }
+        #zhu div{
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            opacity: 0.5;
+            border-radius: 50%;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            position: fixed;
+        }
+        #zhu div:nth-child(1){
+            top: 5px;
+            left: 5px;
+        }
+        #zhu div:nth-child(2){
+            top: 5px;
+            right: 5px;
+        }
+        #wen{
+            width: 375px;
+            height: 122px;
+
+            background-color: white;
+        }
+        #wen .price{
+            width: 355px;
+            height: 60px;
+            margin: auto;
+        }
+        #wen .price span:nth-child(1){
+            font-size: 18px;
+            color: #FF0036;
+            margin-right: -4px;
+        }
+        #wen .price span:nth-child(2){
+            font-size: 24px;
+            color: #FF0036;
+            margin-right: 5px;
+        }
+        #wen .price span:nth-child(3){
+            font-size: 12px;
+            background-color: #FF0036;
+            color: white;
+        }
+        #wen .price span:nth-child(5){
+            font-size: 12px;
+            opacity: 0.6;
+            margin-left: 3px;
+        }
+        #wen .price span:nth-child(6){
+            font-size: 12px;
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+        #wen p{
+            width: 355px;
+            height: 40px;
+            font-size: 14px;
+            margin: auto;
+        }
+        #wen .xiao{
+            width: 355px;
+            height: 18px;
+            margin: auto;
+        }
+        #wen .xiao span{
+            font-size: 12px;
+            opacity: 0.6;
+            margin-right: 30px;
+        }
+        #wen .xiao span:nth-child(3){
+            margin-right: 0;
+            margin-left: 35px;
+
+        }
+        .cu{
+            width: 375px;
+            height: 97px;
+            margin-top: 12px;
+            background-color: white;
+        }
+        .hao{
+            width: 375px;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        .hao_a{
+            font-size: 12px;
+            display: inline-block;
+            margin-left: 10px;
+            opacity: 0.6;
+        }
+        .hao .hao_b{
+            font-size: 5px;
+            color: #FF0036;
+            margin-left: 10px;
+        }
+        .hao .hao_c{
+            font-size: 12px;
+            margin-left: 10px;
+            margin-right: 180px;
+        }
+        .hao .iconfont,.hao1 .iconfont,.yan .y .iconfont{
+            font-size: 20px;
+            opacity: 0.6;
+        }
+        .hao1{
+            width: 375px;
+            height: 53px;
+            line-height: 53px;
+        }
+        .hao1 .hao_c{
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .hao1 .iconfont{
+            margin-left: 2px;
+        }
+        .yan{
+            width: 375px;
+            height: 84px;
+            margin-top: 12px;
+            background-color: white;
+        }
+        .yan .y{
+            width: 375px;
+            height: 42px;
+            line-height: 42px;
+        }
+        .yan .y .hao_c{
+            font-size: 12px;
+            margin-left: 5px;
+            margin-right: 0px;
+        }
+        .pin{
+            width: 375px;
+            height: 155px;
+            margin-top: 12px;
+            background-color: white;
+        }
+        .pin_a,.pin_b,.pin_c,.matter_a,.matter_b,.matter_c{
+            margin: auto;
+        }
+        .pin .pin_a{
+            width: 351px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .pin .pin_a .pin_a_a{
+            font-size: 13px;
+            color: #FF0036;
+            margin-left:162px;
+        }
+        .pin .pin_b{
+            list-style: none;
+            width: 363px;
+            height: 38px;
+            display: flex;
+        }
+        .pin .pin_b li{
+            margin-top: 8px;
+            font-size: 12px;
+            background-color: #FFEEEE;
+            text-align: center;
+            border-radius: 13px;
+            line-height: 26px;
+            margin-right: 12px;
+
+        }
+        .pin .pin_b li:nth-child(1){
+            width: 83px;
+            height: 26px;
+        }
+        .pin .pin_b li:nth-child(2){
+            width: 119px;
+            height: 26px;
+        }
+        .pin .pin_b li:nth-child(3){
+            width: 107px;
+            height: 26px;
+        }
+        .pin_c{
+            width: 351px;
+            height: 95px;
+            border-bottom: 1px solid #F5F5F5;
+        }
+        .pin_c .pin_c_a{
+            width: 351px;
+            height: 24px;
+        }
+        .pin_c .pin_c_a img{
+            width: 24px;
+            height: 24px;
+        }
+        .pin_c .pin_c_a span{
+            width: 32px;
+            height: 24px;
+            font-size: 12px;
+            opacity: 0.6;
+            margin-left: 5px;
+        }
+        .pin_c .pin_c_b{
+            width: 351px;
+            height: 32px;
+            margin-top: 10px;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+        }
+        .pin_c .pin_c_c{
+            width: 351px;
+            height: 22px;
+            font-size: 10px;
+            line-height: 30px;
+            opacity: 0.6;
+        }
+        .matter{
+            width: 375px;
+            height: 102px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+        .matter .matter_a{
+            width: 351px;
+            height: 16px;
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 15px;
+        }
+        .matter .matter_a .matter_a_a{
+            font-size: 13px;
+            color: #FF0036;
+            margin-left: 180px;
+
+        }
+        .matter .matter_b,.matter .matter_c{
+            width: 355px;
+            height: 25px;
+            margin-top: 2px;
+        }
+        .matter .matter_b p,.matter .matter_c p{
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            line-height: 14px;
+            font-size: 10px;
+            border-radius: 3px;
+            background-color: #FF5305;
+        }
+        .matter .matter_b .z{
+            width: 270px;
+            height: 25px;
+            font-size: 13px;
+            margin-left: 10px;
+            margin-right: 132px;
+        }
+        .matter .matter_b .x,.matter .matter_c .x{
+            font-size: 13px;
+            opacity: 0.6;
+        }
+        .matter .matter_c .z{
+            width: 270px;
+            height: 25px;
+            font-size: 13px;
+            margin-left: 10px;
+            margin-right: 162px;
+        }
+        #di{
+            width: 375px;
+            height: 50px;
+            list-style: none;
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        #di li{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+        }
+        #di li:nth-child(1),#di li:nth-child(2),#di li:nth-child(3){
+            text-align: center;
+        }
+        #di li p{
+            font-size: 20px;
+            margin-top: 5px;
+            opacity: 0.6;
+        }
+        #di li span{
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        #di li:nth-child(4),#di li:nth-child(5){
+            width: 112px;
+            background-color: #FF9500;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+        #di li:nth-child(5){
+            background-color: #FF0036;
+        }
+        .xian{
+            width: 351px;
+            height: 75px;
+            margin: auto;
+            text-align: center;
+            font-size: 12px;
+            line-height: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="zhu">
+        <div class="iconfont">&#xe782;</div>
+        <div class="iconfont">&#xe605;</div>
+    </div>
+    <div id="wen">
+        <div class="price">
+            <span>￥</span><span>8777</span><span>活动中</span><br />
+            <span>价格：</span><span>￥9999</span>
+        </div>
+        <p>雷蛇灵刃15标准版轻薄电竞绝地求生游戏笔记本电脑英特尔酷睿九代...</p>
+        <div class="xiao">
+            <span>快递：免运费</span><span>月销量100+件</span><span>货源：上海</span>
+        </div>
+    </div>
+    <div class="cu">
+        <div class="hao">
+            <div class="hao_a">促销</div>
+            <span class="hao_b">积分</span>
+            <span class="hao_c">购买可得10积分</span>
+            <span class="iconfont">&#xe6ef;</span>
+        </div>
+        <div class="hao1">
+            <div class="hao_a">服务</div>
+            <span class="hao_c">一年保修</span>
+            <span class="hao_c">.</span>
+            <span class="hao_c">只换不修</span>
+            <span class="hao_c">.</span>
+            <span class="hao_c">极速退款</span>
+            <span class="hao_c">.</span>
+            <span class="hao_c">七天无理由退换</span>
+            <span class="iconfont"> ></span>
+        </div>
+    </div>
+    <div class="yan">
+        <div class="y">
+            <div class="hao_a">选择</div>
+            <span class="hao_c" style="margin-right: 212px;">请选择颜色分类</span>
+            <span class="iconfont">&#xe6ef;</span>
+        </div>
+        <div class="y">
+            <div class="hao_a">参数</div>
+            <span class="hao_c" style="margin-right: 245px;">品牌  型号</span>
+            <span class="iconfont">&#xe6ef;</span>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="pin_a">商品评价(56)
+            <span class="pin_a_a">查看全部 <span class="iconfont" style="font-size: 20px;">&#xe627;</span></span>
+        </div>
+        <ul class="pin_b">
+            <li>运行快(23)</li>
+            <li>颜值高(13)</li>
+            <li>评分高(20)</li>
+        </ul>
+        <div class="pin_c">
+            <div class="pin_c_a">
+                <img src="./imgs/bec3caf43ae12604.jpg"/>
+                <span>耍酷的猫</span>
+            </div>
+            <div class="pin_c_b">电脑运行就是快。一份价格一分货</div>
+            <div class="pin_c_c">2019-10-01 颜色分类:紫罗兰</div>
+        </div>
+    </div>
+    <div class="matter">
+        <div class="matter_a">问大家(39)
+            <span class="matter_a_a">查看全部 <span class="iconfont" style="font-size: 20px;">&#xe6ef;</span></span>
+        </div>
+        <div class="matter_b">
+            <p>问</p><span class="z">雷蛇笔记本发烫吗</span><span class="x">19个回答</span>
+        </div>
+        <div class="matter_c">
+            <p>问</p><span class="z">你们买的多少钱</span><span class="x">10个回答</span>
+        </div>
+    </div>
+
+    <div class="xian">
+        <hr style="display: inline-block; width: 53px; height: 2px ;border: 1px solid #B0B0B0;"/>别划了，到底了！
+        <hr style=" display: inline-block; width: 53px; height: 2px ;border: 1px solid #B0B0B0;"/>
+    </div>
+    <ul id="di">
+        <li>
+            <p class="iconfont">&#xe66f;</p>
+            <span>店铺</span>
+        </li>
+        <li>
+            <p class="iconfont">&#xe646;</p>
+            <span>客服</span>
+        </li>
+        <li>
+            <p class="iconfont">&#xe60d;</p>
+            <span>收藏</span>
+        </li>
+        <li>
+            <a href="添加购物车.html" style="text-decoration: none"> 加入购物车</a>
+
+        </li>
+        
+        <li>马上抢</li>
+    </ul>
+</div>
+</body>
+</html>
+

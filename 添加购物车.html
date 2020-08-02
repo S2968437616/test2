@@ -1,0 +1,205 @@
+<!DOCTYPE  html>
+<html  lang="en">
+<head>
+    <meta  charset="UTF-8">
+    <title>添加到购物车</title>
+    <link  rel="stylesheet"  type="text/css"  href=/css/iconfont.css">
+    <meta  name="viewport"  content="width=device-width,  initial-scale=1,  maximum-scale=1,  user-scalable=no">
+    <style  type="text/css">
+        *{
+            margin:  0;
+            padding:  0;
+        }
+        #wrap{
+            width:  400px;
+            height:  530px;
+            /*border:  solid  1px  red;*/
+        }
+        #top{
+            width:  350px;
+            height:  500px;
+            margin-left:  10px;
+            background-image:  url("./imgs/bec3caf43ae12604.jpg");
+            background-size:  100%  100%;
+            opacity:0.6
+        }
+        #center{
+            width:  400px;
+            height:  430px;
+            border-top:  solid  1px  black;
+            position:  absolute;
+            top:  200px;
+            background-color:whitesmoke;
+        }
+        #center  .center-top{
+            width:  350px;
+            height:  100px;
+            margin-left:  20px;
+            /*border:  solid  1px  red;*/
+        }
+        #center  .center-top-left{
+            width:  100px;
+            height:  100px;
+            background-image:  url("./imgs/bec3caf43ae12604.jpg");
+            background-size:  100%  100%;
+            position:  absolute;
+            border:  solid  1px  black;
+            top:  0px;
+            left:  0px;
+        }
+        #center  .center-top-right{
+            width:  150px;
+            height:  100px;
+            margin-left:  130px;
+            /*border:  solid  1px  black;*/
+        }
+        #center  .center-center{
+            width:  350px;
+            height:  100px;
+            border-bottom:solid  1px  silver;
+            margin-left:  20px;
+        }
+        #center  .center-center-top{
+            width:  50px;
+            height:  20px;
+            color:  silver;
+            margin-top:  10px;
+            margin-left:  10px;
+        }
+        #center  .center-center-down{
+            width:  350px;
+            height:  20px;
+            margin-top:  10px;
+            margin-left:  10px;
+            display:  flex;
+        }
+        #center  .center-center-down  div{
+            width:  70px;
+            height:  30px;
+            text-align:  center;
+            border-radius:  20px;
+            margin-top:  20px;
+            background-color:  silver;
+        }
+        #center  .center-down{
+            width:  350px;
+            height:  100px;
+            border-bottom:solid  1px  silver;
+            margin-left:  20px;
+        }
+        #center  .center-down-top{
+            width:  50px;
+            height:  20px;
+            color:  silver;
+            margin-top:  10px;
+            margin-left:  10px;
+        }
+        #center  .center-down-down{
+            width:  350px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+        }
+        #center .center-down-down div{
+            width: 70px;
+            height: 30px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-color: silver;
+        }
+        #center .number{
+            width: 350px;
+            height: 50px;
+            display: flex;
+            margin-left: 20px;
+            border-bottom:solid 1px silver;
+        }
+        #center .number-left{
+            width: 70px;
+            height: 20px;
+            /*border: solid 1px red;*/
+            margin-top: 12px;
+            margin-left: 10px;
+        }
+
+        #center .number-right{
+            width: 100px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            display: flex;
+            margin-top: 10px;
+            margin-left: 130px;
+        }
+        #center .number-right div{
+            width: 33px;
+            height: 30px;
+            font-size: 25px;
+            border: solid 1px white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            text-align: center;
+            background-color: silver;
+        }
+        #down{
+            position: fixed;
+            left: 0;
+            top: 92%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="top"></div>
+    <div id="center">
+        <div class="center-top" style="border-bottom: solid 1px silver" >
+            <div class="center-top-left"></div>
+            <div class="center-top-right">
+                <div style="font-size: 25px;color: red">￥288</div>
+                <div style="font-size: 15px">库存88罐</div>
+                <div style="font-size: 15px">请选择口味 剂量</div>
+            </div>
+        </div>
+        <div class="center-center">
+            <div class="center-center-top">
+                口味
+            </div>
+            <div class="center-center-down">
+                <div style="color: pink">草莓味</div>
+                <div style="margin-left:30px">香草味</div>
+                <div style=" margin-left:30px " >巧克力</div>
+            </div>
+        </div>
+        <div class="center-down">
+            <div class="center-down-top">
+                剂量
+            </div>
+            <div class="center-down-down">
+                <div>100ML</div>
+                <div style="margin-left: 10px">150ML</div>
+                <div style="margin-left: 15px">300ML</div>
+
+            </div>
+        </div>
+        <div class="number">
+            <div class="number-left">
+                购买数量
+            </div>
+            <div class="number-right">
+                <div>-</div>
+                <div>10</div>
+                <div>+</div>
+            </div>
+        </div>
+    </div>
+    <div id="down">
+        <input type="button" value="确认" style="width: 400px;height: 50px;background-color:orange">
+    </div>
+
+    </div>
+</div>
+</body>
+</html>
